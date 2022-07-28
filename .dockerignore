@@ -1,0 +1,9 @@
+.vscode
+.devcontainer
+bin
+doc
+Vagrantfile
+.gitignore
+build.sh
+README.md
+Makefile
