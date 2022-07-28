@@ -21,9 +21,17 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Create fake mount sources
+        run: |
+          mkdir -p ~/.azure
+
       - name: Build and run dev container task
         uses: devcontainers/ci@v0.2
         with:
           imageName: ghcr.io/stuartleeks/scrumonline-devcontainer
           runCmd: |
             make docker-build
+
+# TODO
+# - enable overriding image name in Makefile
+# - update build to use GH qualified image and push
