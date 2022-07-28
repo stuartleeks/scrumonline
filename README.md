@@ -1,6 +1,7 @@
 # ScrumOnline
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/scrumonline/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+This is a fork of https://github.com/Toxantron/scrumonline and includes a Dockerfile for building an image with an embedded MySQL instance for ease of spinning up an instance (based on https://github.com/chrisns/scrumonline). No responsibility is taken for whether the result is functional/secure/... - it works well enough for me, and that's it 😀!
+
 
 PHP web app for planning poker. It includes a master view for the ScrumMaster and a simple responsive card view for the team. A deployed demo is available at http://www.scrumpoker.online
 
