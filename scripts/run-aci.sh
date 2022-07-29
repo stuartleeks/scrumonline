@@ -27,5 +27,14 @@ az container create \
 	--image ghcr.io/stuartleeks/scrumonline/scrumonline \
 	--environment-variables HOST="http://$ACI_NAME.$LOCATION.azurecontainer.io" \
 	--dns-name-label "$ACI_NAME" \
-	--ports 80
+	--ports 80 \
+	--cpu 2
 
+
+echo
+echo "Open browser at http://$ACI_NAME.$LOCATION.azurecontainer.io"
+echo
+echo "To view logs: az container logs --resource-group $RG_NAME --name $ACI_NAME --follow"
+echo
+echo "To clean up: az container delete --resource-group $RG_NAME --name $ACI_NAME"
+echo
