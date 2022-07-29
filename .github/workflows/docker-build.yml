@@ -30,8 +30,6 @@ jobs:
         with:
           imageName: ghcr.io/stuartleeks/scrumonline-devcontainer
           runCmd: |
-            make docker-build
-
-# TODO
-# - enable overriding image name in Makefile
-# - update build to use GH qualified image and push
+            make docker-build && docker push ghcr.io/stuartleeks/scrumonline
+          env: |
+            IMAGE_NAME=ghcr.io/stuartleeks/scrumonline
