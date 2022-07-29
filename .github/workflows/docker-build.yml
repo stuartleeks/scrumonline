@@ -33,3 +33,4 @@ jobs:
             make docker-build && docker push ghcr.io/stuartleeks/scrumonline/scrumonline
           env: |
             IMAGE_NAME=ghcr.io/stuartleeks/scrumonline/scrumonline
+          refFilterForPush: refs/heads/sl/docker
