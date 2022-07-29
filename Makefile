@@ -8,7 +8,7 @@ help: ## show this help
 	| column -t -s '|'
 
 docker-build: ## Build the docker image
-	docker build -t ${IMAGE_NAME} -f Dockerfile  .
+	IMAGE_NAME=${IMAGE_NAME} ./scripts/build.sh
 
 docker-run: ## Run the docker image locally
 	docker run -it --rm \
