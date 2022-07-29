@@ -30,7 +30,7 @@ jobs:
         with:
           imageName: ghcr.io/stuartleeks/scrumonline/devcontainer
           runCmd: |
-            make docker-build && docker push ghcr.io/stuartleeks/scrumonline/scrumonline
+            make docker-build #&& docker push ghcr.io/stuartleeks/scrumonline/scrumonline
           env: |
             IMAGE_NAME=ghcr.io/stuartleeks/scrumonline/scrumonline
             CI=1
