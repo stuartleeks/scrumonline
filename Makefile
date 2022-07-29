@@ -1,6 +1,7 @@
 .PHONY: help
 
 IMAGE_NAME?=scrumonline
+RUN_URL?=http://localhost:8080
 
 help: ## show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
@@ -13,5 +14,5 @@ docker-build: ## Build the docker image
 docker-run: ## Run the docker image locally
 	docker run -it --rm \
 	-p 8080:80 \
-	-e HOST="http://localhost:8080" \
+	-e HOST="${RUN_URL}" \
 	${IMAGE_NAME}
