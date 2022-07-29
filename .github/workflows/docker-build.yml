@@ -30,8 +30,7 @@ jobs:
         with:
           imageName: ghcr.io/stuartleeks/scrumonline/devcontainer
           runCmd: |
-            make docker-build #&& docker push ghcr.io/stuartleeks/scrumonline/scrumonline
+            ./scripts/ci.sh
           env: |
-            IMAGE_NAME=ghcr.io/stuartleeks/scrumonline/scrumonline
-            CI=1
+            GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
           refFilterForPush: refs/heads/sl/docker
